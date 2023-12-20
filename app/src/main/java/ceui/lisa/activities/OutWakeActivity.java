@@ -51,7 +51,7 @@ public class OutWakeActivity extends BaseActivity<ActivityOutWakeBinding> {
     }
 
     @Override
-    protected void initData() {
+    protected void initData() { // 具体操作
         Intent intent = getIntent();
         if (intent != null) {
             Uri uri = intent.getData();
@@ -282,7 +282,7 @@ public class OutWakeActivity extends BaseActivity<ActivityOutWakeBinding> {
         if (sUserModel != null && sUserModel.getUser().isIs_login()) {
             Intent i = new Intent(mContext, MainActivity.class);
             mActivity.startActivity(i);
-            mActivity.finish();
+            mActivity.finish(); //登陆成功，跳转回MainActivity
         } else {
             Intent i = new Intent(mContext, TemplateActivity.class);
             i.putExtra(TemplateActivity.EXTRA_FRAGMENT, "登录注册");

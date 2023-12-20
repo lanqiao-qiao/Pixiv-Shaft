@@ -81,6 +81,7 @@ import ceui.loxia.flag.FlagDescFragment;
 import ceui.loxia.flag.FlagReasonFragment;
 
 public class TemplateActivity extends BaseActivity<ActivityFragmentBinding> implements ColorPickerDialogListener {
+    // 像是一个模板activity?
 
     public static final String EXTRA_FRAGMENT = "dataType";
     public static final String EXTRA_KEYWORD = "keyword";
@@ -106,6 +107,7 @@ public class TemplateActivity extends BaseActivity<ActivityFragmentBinding> impl
                 case "浏览记录":
                     return new FragmentHistory();
                 case "网页链接": {
+                    // 从登录跳转过来
                     String url = intent.getStringExtra(Params.URL);
                     String title = intent.getStringExtra(Params.TITLE);
                     boolean preferPreserve = intent.getBooleanExtra(Params.PREFER_PRESERVE, false);

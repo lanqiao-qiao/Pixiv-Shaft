@@ -45,6 +45,7 @@ class LandingViewModel : ViewModel() {
 }
 
 class FragmentLogin : BaseFragment<ActivityLoginBinding>() {
+    // 登录fragment
 
     private val viewModel: LandingViewModel by viewModels()
     private val springSystem = SpringSystem.create()

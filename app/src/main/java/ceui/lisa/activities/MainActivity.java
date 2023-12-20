@@ -217,6 +217,7 @@ public class MainActivity extends BaseActivity<ActivityCoverBinding>
 
     @Override
     protected void initData() {
+        // 判断 无账号则跳转登录/注册
         if (sUserModel != null && sUserModel.getUser() != null && sUserModel.getUser().isIs_login()) {
             if (Common.isAndroidQ()) {
                 initFragment();

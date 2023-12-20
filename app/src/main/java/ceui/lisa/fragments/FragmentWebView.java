@@ -118,7 +118,7 @@ public class FragmentWebView extends BaseFragment<FragmentWebviewBinding> {
         args.putString(Params.TITLE, title);
         args.putString(Params.URL, url);
         args.putBoolean(Params.PREFER_PRESERVE, preferPreserve);
-        FragmentWebView fragment = new FragmentWebView();
+        FragmentWebView fragment = new FragmentWebView(); // 构建新FragmentWebView
         fragment.setArguments(args);
         return fragment;
     }
@@ -200,7 +200,7 @@ public class FragmentWebView extends BaseFragment<FragmentWebviewBinding> {
                                     try {
                                         Intent intent = new Intent(mContext, OutWakeActivity.class);
                                         intent.setData(Uri.parse(destiny));
-                                        startActivity(intent);
+                                        startActivity(intent); //跳转
                                         if (!preferPreserve) {
                                             finish();
                                         }
